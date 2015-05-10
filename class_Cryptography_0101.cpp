@@ -209,11 +209,11 @@ void cryptbeta(vector <Beta>& beta,string& speakfool)
 
 void decryptbeta(vector <Beta>& beta,string& speakfool)
 {
-  cout<<" Decrypted text: ";
+  	cout<<" Decrypted text: ";
     
-  string letters_8 = "";
-  for (int j = 0; j < speakfool.size(); ++j)
-  {
+  	string letters_8 = "";
+  	for (int j = 0; j < speakfool.size(); ++j)
+  	{
 		  if ((speakfool[j] == '0')||(speakfool[j] == '1'))
 		  {
 	        	letters_8 += speakfool[j];
