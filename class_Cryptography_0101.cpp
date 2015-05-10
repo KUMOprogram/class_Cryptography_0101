@@ -107,10 +107,10 @@ system("color f1");
 		
 		if (choice == 1)
 		{
-        print_beta(beta);
+        		print_beta(beta);
 		}
 
-    if (choice == 2)
+    		if (choice == 2)
 		{
 			getline(cin,CPPbug);
 			cout<<" Give a text to encrypt: ";
@@ -119,16 +119,16 @@ system("color f1");
 			cryptbeta(beta,speakfool);
 		}
 
-    if (choice == 3)
+    		if (choice == 3)
 		{
-            getline(cin,CPPbug);
+            		getline(cin,CPPbug);
 			cout<<" Give a text to decrypt: ";
 			getline(cin,speakfool);
 
 			decryptbeta(beta,speakfool);
 		}
 
-    if (choice == 0)
+    		if (choice == 0)
 		{
 			break;
 		}
@@ -175,7 +175,7 @@ void print_beta(vector <Beta>& beta)
 
 void cryptbeta(vector <Beta>& beta,string& speakfool)
 {
-  srand(time(0));
+  	srand(time(0));
 	cout<<" Encrypted text: ";
 	
 	for (int j = 0; j < speakfool.size(); ++j)
@@ -189,12 +189,12 @@ void cryptbeta(vector <Beta>& beta,string& speakfool)
 			{
 				if (r == 1)
 				{
-                    cout<<beta[i].getcode1();
+                    			cout<<beta[i].getcode1();
 					flag = 1;
 				}
 				else if (r == 2)
 				{
-                    cout<<beta[i].getcode2();
+                    			cout<<beta[i].getcode2();
 					flag = 1;
 				}
 			}
@@ -216,9 +216,9 @@ void decryptbeta(vector <Beta>& beta,string& speakfool)
   {
 		  if ((speakfool[j] == '0')||(speakfool[j] == '1'))
 		  {
-	        letters_8 += speakfool[j];
-			    if (letters_8.size() == 8)
-			    {
+	        	letters_8 += speakfool[j];
+			if (letters_8.size() == 8)
+			{
 				      for (int i = 0; i < beta.size(); ++i)
 				      {
 					        if(letters_8.find(beta[i].getcode1())!=string::npos)
@@ -231,13 +231,13 @@ void decryptbeta(vector <Beta>& beta,string& speakfool)
         						  cout<<beta[i].getrealletter();
         					}
 				      }
-            	letters_8 = "";
-			    }
+            		letters_8 = "";
+			}
 		  }
 		  else
 		  {
-			    cout<<speakfool[j];
+			cout<<speakfool[j];
 		  }
 	}
-  cout<<endl<<endl;
+  	cout<<endl<<endl;
 }
